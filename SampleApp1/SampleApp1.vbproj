@@ -165,10 +165,36 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="blank-page.html" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Startbootstrap\css\bootstrap-rtl.css" />
+    <Content Include="Content\Startbootstrap\css\bootstrap-rtl.min.css" />
+    <Content Include="Content\Startbootstrap\css\bootstrap.css" />
+    <Content Include="Content\Startbootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\Startbootstrap\css\plugins\morris.css" />
+    <Content Include="Content\Startbootstrap\css\sb-admin-rtl.css" />
+    <Content Include="Content\Startbootstrap\css\sb-admin.css" />
+    <Content Include="Content\Startbootstrap\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\Startbootstrap\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\Startbootstrap\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Startbootstrap\js\bootstrap.js" />
+    <Content Include="Content\Startbootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\Startbootstrap\js\jquery.js" />
+    <Content Include="Content\Startbootstrap\js\plugins\flot\excanvas.min.js" />
+    <Content Include="Content\Startbootstrap\js\plugins\flot\flot-data.js" />
+    <Content Include="Content\Startbootstrap\js\plugins\flot\jquery.flot.js" />
+    <Content Include="Content\Startbootstrap\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Content\Startbootstrap\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Content\Startbootstrap\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\Startbootstrap\js\plugins\morris\morris-data.js" />
+    <Content Include="Content\Startbootstrap\js\plugins\morris\morris.js" />
+    <Content Include="Content\Startbootstrap\js\plugins\morris\morris.min.js" />
+    <Content Include="Content\Startbootstrap\js\plugins\morris\raphael.min.js" />
+    <Content Include="ContohTemplate.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -176,6 +202,40 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Startbootstrap\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Startbootstrap\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Startbootstrap\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Startbootstrap\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\Startbootstrap\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\Startbootstrap\font-awesome\less\core.less" />
+    <Content Include="Content\Startbootstrap\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\Startbootstrap\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\Startbootstrap\font-awesome\less\icons.less" />
+    <Content Include="Content\Startbootstrap\font-awesome\less\larger.less" />
+    <Content Include="Content\Startbootstrap\font-awesome\less\list.less" />
+    <Content Include="Content\Startbootstrap\font-awesome\less\mixins.less" />
+    <Content Include="Content\Startbootstrap\font-awesome\less\path.less" />
+    <Content Include="Content\Startbootstrap\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\Startbootstrap\font-awesome\less\spinning.less" />
+    <Content Include="Content\Startbootstrap\font-awesome\less\stacked.less" />
+    <Content Include="Content\Startbootstrap\font-awesome\less\variables.less" />
+    <Content Include="Content\Startbootstrap\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\Startbootstrap\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\Startbootstrap\font-awesome\scss\_core.scss" />
+    <Content Include="Content\Startbootstrap\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\Startbootstrap\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\Startbootstrap\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\Startbootstrap\font-awesome\scss\_list.scss" />
+    <Content Include="Content\Startbootstrap\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\Startbootstrap\font-awesome\scss\_path.scss" />
+    <Content Include="Content\Startbootstrap\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\Startbootstrap\font-awesome\scss\_spinning.scss" />
+    <Content Include="Content\Startbootstrap\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\Startbootstrap\font-awesome\scss\_variables.scss" />
+    <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="SampleServerControl.aspx" />
     <Content Include="SampleValidation.aspx" />
@@ -240,6 +300,13 @@
     </Compile>
     <Compile Include="Contact.aspx.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ContohTemplate.aspx.designer.vb">
+      <DependentUpon>ContohTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContohTemplate.aspx.vb">
+      <DependentUpon>ContohTemplate.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.vb">

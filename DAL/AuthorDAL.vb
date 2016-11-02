@@ -34,7 +34,28 @@ Public Class AuthorDAL
     End Sub
 
     Public Sub Update(model As Author) Implements ICrud(Of Author).Update
-        Throw New NotImplementedException()
+        Using conn As New SqlConnection(GetConn())
+            Dim strSql = "update Authors set FirstName=@FirstName,
+                          LastName=@LastName,Email=@Email 
+                          where AuthorID=@AuthorID"
+
+            Dim cmd As New SqlCommand(strSql, conn)
+            cmd.Parameters.Clear()
+            cmd.Parameters.AddWithValue("FirstName", model.FirstName)
+            cmd.Parameters.AddWithValue("LastName", model.LastName)
+            cmd.Parameters.AddWithValue("Email", model.Email)
+            cmd.Parameters.AddWithValue("AuthorID", model.AuthorID)
+
+            Try
+                conn.Open()
+                cmd.ExecuteNonQuery()
+            Catch sqlEx As SqlException
+                Throw New Exception(sqlEx.Number & " " & sqlEx.Message)
+            Finally
+                cmd.Dispose()
+                conn.Close()
+            End Try
+        End Using
     End Sub
 
     Public Function GetAll() As IEnumerable(Of Author) Implements ICrud(Of Author).GetAll

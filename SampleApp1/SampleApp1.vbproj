@@ -136,9 +136,7 @@
       <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
@@ -165,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="App_Data\script.sql" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -236,6 +235,7 @@
     <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="SampleParameter.aspx" />
     <Content Include="SampleServerControl.aspx" />
     <Content Include="SampleValidation.aspx" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
@@ -336,6 +336,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SampleParameter.aspx.designer.vb">
+      <DependentUpon>SampleParameter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleParameter.aspx.vb">
+      <DependentUpon>SampleParameter.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="SampleServerControl.aspx.designer.vb">
       <DependentUpon>SampleServerControl.aspx</DependentUpon>

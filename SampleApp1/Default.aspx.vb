@@ -6,5 +6,7 @@
         Dim urlsegemen = Page.RouteData.Values("id").ToString
 
         lblParam.Text = Request.QueryString("nama") + " " + Request.QueryString("alamat")
+
+
     End Sub
 End Class

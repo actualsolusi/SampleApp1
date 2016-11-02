@@ -59,6 +59,24 @@ Partial Public Class SampleValidation
     Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''txtKodePasien control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtKodePasien As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''cvKode control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cvKode As Global.System.Web.UI.WebControls.CustomValidator
+    
+    '''<summary>
     '''btnSubmit control.
     '''</summary>
     '''<remarks>

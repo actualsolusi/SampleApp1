@@ -36,6 +36,13 @@
             ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
             ForeColor="Red" /><br /><br />
 
+        <label for="txtKodePasien">Kode Pasien :</label><br />
+        <asp:TextBox runat="server" ID="txtKodePasien" />
+        <asp:CustomValidator ErrorMessage="{Kode tidak tepat}" 
+            ControlToValidate="txtKodePasien" ID="cvKode" OnServerValidate="cvKode_ServerValidate" 
+            ForeColor="Red"  runat="server" />
+        <br /><br />
+
         <asp:Button Text="Submit" ID="btnSubmit" runat="server" />
     </fieldset>
 </asp:Content>

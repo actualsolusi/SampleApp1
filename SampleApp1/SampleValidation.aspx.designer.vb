@@ -41,6 +41,15 @@ Partial Public Class SampleValidation
     Protected WithEvents txtRepassword As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''txtUmur control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtUmur As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''btnSubmit control.
     '''</summary>
     '''<remarks>

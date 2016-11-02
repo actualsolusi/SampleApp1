@@ -7,7 +7,26 @@ Public Class AuthorDAL
     Implements ICrud(Of Author)
 
     Public Sub Create(model As Author) Implements ICrud(Of Author).Create
-        Throw New NotImplementedException()
+        Using conn As New SqlConnection(GetConn())
+            Dim strSql = "insert into Authors(FirstName,LastName,Email) 
+                          values(@FirstName,@LastName,@Email)"
+
+            Dim cmd As New SqlCommand(strSql, conn)
+            cmd.Parameters.Clear()
+            cmd.Parameters.AddWithValue("FirstName", model.FirstName)
+            cmd.Parameters.AddWithValue("LastName", model.LastName)
+            cmd.Parameters.AddWithValue("Email", model.Email)
+
+            Try
+                conn.Open()
+                cmd.ExecuteNonQuery()
+            Catch sqlEx As SqlException
+                Throw New Exception(sqlEx.Number & " " & sqlEx.Message)
+            Finally
+                cmd.Dispose()
+                conn.Close()
+            End Try
+        End Using
     End Sub
 
     Public Sub Delete(id As String) Implements ICrud(Of Author).Delete

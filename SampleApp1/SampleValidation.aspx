@@ -15,6 +15,8 @@
         <label for="txtRepassword">Repassword :</label><br />
         <asp:TextBox runat="server" TextMode="Password"  ID="txtRepassword" />
 
+        <label for="txtUmur">Umur :</label>
+
         <asp:Button Text="Submit" ID="btnSubmit" runat="server" />
     </fieldset>
 </asp:Content>

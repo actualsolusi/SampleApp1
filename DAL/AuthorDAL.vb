@@ -30,7 +30,24 @@ Public Class AuthorDAL
     End Sub
 
     Public Sub Delete(id As String) Implements ICrud(Of Author).Delete
-        Throw New NotImplementedException()
+        Using conn As New SqlConnection(GetConn())
+            Dim strSql = "delete from Authors 
+                          where AuthorID=@AuthorID"
+
+            Dim cmd As New SqlCommand(strSql, conn)
+            cmd.Parameters.Clear()
+            cmd.Parameters.AddWithValue("AuthorID", id)
+
+            Try
+                conn.Open()
+                cmd.ExecuteNonQuery()
+            Catch sqlEx As SqlException
+                Throw New Exception(sqlEx.Number & " " & sqlEx.Message)
+            Finally
+                cmd.Dispose()
+                conn.Close()
+            End Try
+        End Using
     End Sub
 
     Public Sub Update(model As Author) Implements ICrud(Of Author).Update

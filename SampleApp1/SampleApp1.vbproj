@@ -202,6 +202,7 @@
     <Content Include="Content\Startbootstrap\js\plugins\morris\morris.min.js" />
     <Content Include="Content\Startbootstrap\js\plugins\morris\raphael.min.js" />
     <Content Include="ContohTemplate.aspx" />
+    <Content Include="DaftarAuthor.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -315,6 +316,13 @@
     </Compile>
     <Compile Include="ContohTemplate.aspx.vb">
       <DependentUpon>ContohTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DaftarAuthor.aspx.designer.vb">
+      <DependentUpon>DaftarAuthor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DaftarAuthor.aspx.vb">
+      <DependentUpon>DaftarAuthor.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.vb">

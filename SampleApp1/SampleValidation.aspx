@@ -20,7 +20,7 @@
              ControlToValidate="txtRepassword" ControlToCompare="txtPassword" 
              Type="String" Operator="Equal" ForeColor="Red" runat="server" /><br /><br />
 
-        <label for="txtUmur">Umur :</label>
+        <label for="txtUmur">Umur :</label><br />
         <asp:TextBox runat="server" ID="txtUmur" />
         <asp:RangeValidator ErrorMessage="{Umur harus antara 17-60}" 
             ControlToValidate="txtUmur" MinimumValue="17" MaximumValue="60" ForeColor="Red" runat="server" />
@@ -29,6 +29,12 @@
              runat="server" />
         <br /><br />
 
+        <label for="txtEmail">Email :</label><br />
+        <asp:TextBox runat="server" ID="txtEmail" TextMode="Email" />
+        <asp:RegularExpressionValidator ErrorMessage="{Format email tidak tepat}" 
+            ControlToValidate="txtEmail" runat="server" 
+            ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
+            ForeColor="Red" /><br /><br />
 
         <asp:Button Text="Submit" ID="btnSubmit" runat="server" />
     </fieldset>

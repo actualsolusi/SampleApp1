@@ -32,6 +32,7 @@ Public Class AuthorDAL
             If dr.HasRows Then
                 While (dr.Read())
                     lstAuthor.Add(New Author With {
+                                  .AuthorID = CInt(dr("AuthorID")),
                                   .FirstName = dr("FirstName").ToString,
                                   .LastName = dr("LastName").ToString,
                                   .Email = dr("Email").ToString
@@ -47,7 +48,31 @@ Public Class AuthorDAL
     End Function
 
     Public Function GetByID(id As String) As Author Implements ICrud(Of Author).GetByID
-        Throw New NotImplementedException()
+        Using conn As New SqlConnection(GetConn())
+            Dim _author As New Author
+            Dim strSql = "select * from Authors 
+                          where AuthorID=@AuthorID"
+
+            Dim cmd As New SqlCommand(strSql, conn)
+            cmd.Parameters.Clear()
+            cmd.Parameters.AddWithValue("AuthorID", id)
+
+            conn.Open()
+            Dim dr = cmd.ExecuteReader
+            If dr.HasRows Then
+                While dr.Read
+                    _author.AuthorID = CInt(dr("AuthorID"))
+                    _author.FirstName = dr("FirstName").ToString
+                    _author.LastName = dr("LastName").ToString
+                    _author.Email = dr("Email").ToString
+                End While
+            End If
+
+            dr.Close()
+            cmd.Dispose()
+
+            Return _author
+        End Using
     End Function
 
     Private Function GetConn() As String

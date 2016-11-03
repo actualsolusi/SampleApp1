@@ -13,7 +13,28 @@ Public Class BookDAL
 
 
     Public Sub Create(model As Book) Implements ICrud(Of Book).Create
-        Throw New NotImplementedException()
+        Using conn As New SqlConnection(GetConn())
+            Dim strSql = "insert into Book(AuthorID,CategoryID,Title,PublicationDate,ISBN,CoverImage,Price,Description,Publisher) 
+            values(@AuthorID,@CategoryID,@Title,@PublicationDate,@ISBN,@CoverImage,@Price,@Description,@Publisher)"
+
+            Dim params = New With {
+            .AuthorID = model.AuthorID,
+            .CategoryID = model.CategoryID,
+            .Title = model.Title,
+            .PublicationDate = model.PublicationDate,
+            .ISBN = model.ISBN,
+            .CoverImage = model.CoverImage,
+            .Price = model.Price,
+            .Description = model.Description,
+            .Publisher = model.Publisher
+            }
+
+            Try
+                conn.Execute(strSql, params)
+            Catch sqlEx As SqlException
+                Throw New Exception(sqlEx.Number & " " & sqlEx.Message)
+            End Try
+        End Using
     End Sub
 
     Public Sub Delete(id As String) Implements ICrud(Of Book).Delete

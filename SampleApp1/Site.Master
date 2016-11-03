@@ -18,6 +18,8 @@
     <link href="~/Content/Startbootstrap/css/sb-admin.css" runat="server" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="~/Content/Startbootstrap/font-awesome/css/font-awesome.min.css" runat="server" rel="stylesheet" type="text/css">
+    <link href="~/Content/css/select2.min.css" runat="server" rel="stylesheet" type="text/css"  />
+
 
     <%--<webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />--%>

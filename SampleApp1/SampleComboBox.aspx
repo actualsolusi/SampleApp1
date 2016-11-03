@@ -21,7 +21,12 @@
         </div>
 
         <br />
-        <asp:Label ID="lblData" runat="server" />
+        <asp:Label ID="lblData" runat="server" /><br /><br />
+
+        <asp:DropDownList runat="server" ID="ddSample">
+            <asp:ListItem Text="text1" />
+            <asp:ListItem Text="text2" />
+        </asp:DropDownList>
     </div>
 
 

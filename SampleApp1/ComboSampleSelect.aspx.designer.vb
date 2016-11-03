@@ -11,41 +11,32 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class SampleComboBox
+Partial Public Class ComboSampleSelect
     
     '''<summary>
-    '''cmbCategory control.
+    '''ddCategory control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents cmbCategory As Global.AjaxControlToolkit.ComboBox
+    Protected WithEvents ddCategory As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''btnPilih control.
+    '''btnSubmit control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnPilih As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnSubmit As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''lblData control.
+    '''lblCAtegory control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblData As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''ddSample control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ddSample As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents lblCAtegory As Global.System.Web.UI.WebControls.Label
 End Class

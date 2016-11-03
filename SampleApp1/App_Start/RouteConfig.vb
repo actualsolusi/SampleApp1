@@ -7,6 +7,6 @@ Public Module RouteConfig
         settings.AutoRedirectMode = RedirectMode.Permanent
         routes.EnableFriendlyUrls(settings)
 
-        routes.MapPageRoute("", "DaftarPasien/{id}", "~/Default.aspx")
+        'routes.MapPageRoute("", "DaftarPasien/{id}", "~/Default.aspx")
     End Sub
 End Module

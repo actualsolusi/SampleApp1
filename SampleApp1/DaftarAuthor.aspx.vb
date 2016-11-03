@@ -58,4 +58,21 @@ Public Class DaftarAuthor
             ModelState.AddModelError("", String.Format("Error {0}", ex.Message))
         End Try
     End Sub
+
+    Public Sub frmTambahAuthor_InsertItem()
+        Try
+            Dim item = New BO.Author()
+            TryUpdateModel(item)
+            If ModelState.IsValid Then
+                If ModelState.IsValid Then
+                    authorDAL.Create(item)
+                    gvAuthor.DataBind()
+                    ltPesan.Text = "<div class='alert alert-success'>Data berhasil ditambah !</div>"
+                End If
+            End If
+        Catch ex As Exception
+            ModelState.AddModelError("", String.Format("Error {0}", ex.Message))
+        End Try
+    End Sub
+
 End Class

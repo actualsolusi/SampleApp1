@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="Contoh Template" Language="vb" AutoEventWireup="false"
     MasterPageFile="~/Site.Master" CodeBehind="ContohTemplate.aspx.vb" Inherits="SampleApp1.ContohTemplate" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1 class="page-header">List Pasien
         <small>halaman untuk pasien</small>
@@ -77,8 +79,10 @@
         </div>
     </div>
 
+    <ajaxToolkit:ModalPopupExtender ID="modalCategory" runat="server">
+    </ajaxToolkit:ModalPopupExtender>
 
-
+   
 
 
 </asp:Content>

@@ -1,8 +1,47 @@
 ﻿<%@ Page Title="Book Page" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="BookPage.aspx.vb" Inherits="SampleApp1.BookPage" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Book Page</h2>
     <br />
+
+    <script type="text/javascript">
+
+        function BindEvents() {
+            $(document).ready(function () {
+                $("#gvCategory").on("click", "tr", function () {
+                    //console.log($(this).find("td").eq(0).text());
+                    var idCategory = $(this).find("td").eq(0).text();
+                    var namaCategory = $(this).find("td").eq(1).text();
+                    //console.log(namaCategory);
+                    $("#MainContent_frmBook_txtCategoryID").val(idCategory);
+                    $("#MainContent_frmBook_txtCategoryName").val(namaCategory);
+                    //$("#MainContent_pnlCategory").modal().hide();
+                    var modalPopupBehavior = $find('programmaticModalPopupBehavior');
+                    modalPopupBehavior.hide();
+                });
+            });
+        }
+
+
+
+        //var prm = Sys.WebForms.PageRequestManager.getInstance();
+
+        //prm.add_endRequest(function () {
+        //    $("#gvCategory").on("click", "tr", function () {
+        //        //console.log($(this).find("td").eq(0).text());
+        //        var idCategory = $(this).find("td").eq(0).text();
+        //        var namaCategory = $(this).find("td").eq(1).text();
+        //        //console.log(namaCategory);
+        //        $("#MainContent_frmBook_txtCategoryID").val(idCategory);
+        //        $("#MainContent_frmBook_txtCategoryName").val(namaCategory);
+        //        //$("#MainContent_pnlCategory").modal().hide();
+        //        var modalPopupBehavior = $find('programmaticModalPopupBehavior');
+        //        modalPopupBehavior.hide();
+        //    });
+        //});
+    </script>
 
     <asp:FormView runat="server" ID="frmBook" ItemType="BO.Book" DataKeyNames="BookID"
         DefaultMode="Insert" RenderOuterTable="false">
@@ -75,7 +114,7 @@
                     <div class="col-sm-10">
                         <asp:TextBox runat="server" ID="txtPrice"
                             Text="<%# BindItem.Price %>" TextMode="Number"
-                            CssClass="form-control" placeholder="Enter isbn" />
+                            CssClass="form-control" placeholder="Enter price" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -102,6 +141,50 @@
                     </div>
                 </div>
             </div>
+
+            <ajaxToolkit:ModalPopupExtender
+                ID="modalCategory"
+                TargetControlID="txtCategoryID"
+                PopupControlID="pnlCategory"
+                BackgroundCssClass="modalBackground"
+                DropShadow="true"
+                PopupDragHandleControlID="pnlDrag"
+                BehaviorID="programmaticModalPopupBehavior"
+                runat="server">
+            </ajaxToolkit:ModalPopupExtender>
+
+            <asp:Panel runat="server" ID="pnlCategory" Style="background-color: white;">
+                <asp:Panel ID="pnlDrag" runat="server"
+                    Style="cursor: move; background-color: #DDDDDD; border: solid 1px Gray; color: Black">
+                    <div>
+                        <p>
+                            Form List Category
+                        </p>
+                    </div>
+                </asp:Panel>
+
+                <asp:UpdatePanel runat="server" ID="pnlListCategory">
+                    <ContentTemplate>
+                        <script type="text/javascript">
+                            Sys.Application.add_load(BindEvents);
+                        </script>
+                        <label for="txtSearchCategory">Search :</label>
+                        <asp:TextBox runat="server" ID="txtSearchCategory" AutoPostBack="true" OnTextChanged="txtSearchCategory_TextChanged" /><br />
+                        <asp:GridView runat="server" ClientIDMode="Static"
+                            CssClass="table table-bordered table-hover" ID="gvCategory" ItemType="BO.Category"
+                            AutoGenerateColumns="false" SelectMethod="gvCategory_GetData">
+                            <Columns>
+                                <asp:BoundField DataField="CategoryID" HeaderText="ID" />
+                                <asp:BoundField DataField="CategoryName" HeaderText="Name" />
+                            </Columns>
+                        </asp:GridView>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="txtSearchCategory" EventName="TextChanged" />
+                    </Triggers>
+                </asp:UpdatePanel>
+            </asp:Panel>
+
         </InsertItemTemplate>
     </asp:FormView>
 
@@ -119,4 +202,8 @@
         </Columns>
 
     </asp:GridView>
+
+
+
+
 </asp:Content>

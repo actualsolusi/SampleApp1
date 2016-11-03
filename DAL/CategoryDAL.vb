@@ -69,6 +69,21 @@ Public Class CategoryDAL
         End Using
     End Function
 
+
+    Public Function GetAllByName(categoryName As String) As IEnumerable(Of Category)
+        Using conn As New SqlConnection(GetConn())
+            Dim strSql = "select * from Categories
+                          where CategoryName like @CategoryName 
+                          order by CategoryName"
+
+            Dim params = New With {.CategoryName = "%" & categoryName & "%"}
+
+            Dim results = conn.Query(Of Category)(strSql, params)
+
+            Return results
+        End Using
+    End Function
+
     Public Function GetByID(id As String) As Category Implements ICrud(Of Category).GetByID
         Using conn As New SqlConnection(GetConn())
             Dim strSql = "select * from Categories 

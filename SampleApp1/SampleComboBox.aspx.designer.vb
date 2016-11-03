@@ -11,32 +11,32 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ContohTemplate
+Partial Public Class SampleComboBox
     
     '''<summary>
-    '''txtEmail control.
+    '''cmbCategory control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents cmbCategory As Global.AjaxControlToolkit.ComboBox
     
     '''<summary>
-    '''txtPassword control.
+    '''btnPilih control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents btnPilih As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''modalCategory control.
+    '''lblData control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents modalCategory As Global.AjaxControlToolkit.ModalPopupExtender
+    Protected WithEvents lblData As Global.System.Web.UI.WebControls.Label
 End Class

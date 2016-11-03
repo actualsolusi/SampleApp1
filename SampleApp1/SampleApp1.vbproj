@@ -50,6 +50,10 @@
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=16.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Users\erick\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -246,6 +250,7 @@
     <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="SampleComboBox.aspx" />
     <Content Include="SampleParameter.aspx" />
     <Content Include="SampleServerControl.aspx" />
     <Content Include="SampleValidation.aspx" />
@@ -361,6 +366,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SampleComboBox.aspx.designer.vb">
+      <DependentUpon>SampleComboBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleComboBox.aspx.vb">
+      <DependentUpon>SampleComboBox.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="SampleParameter.aspx.designer.vb">
       <DependentUpon>SampleParameter.aspx</DependentUpon>

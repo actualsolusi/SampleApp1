@@ -41,4 +41,21 @@ Public Class DaftarAuthor
             End Try
         End If
     End Sub
+
+    ' The id parameter name should match the DataKeyNames value set on the control
+    Public Sub gvAuthor_DeleteItem(ByVal AuthorID As Integer)
+        Dim item As BO.Author = authorDAL.GetByID(AuthorID.ToString)
+
+        If item Is Nothing Then
+            ModelState.AddModelError("", String.Format("Item with id {0} was not found", AuthorID))
+            Return
+        End If
+
+        Try
+            authorDAL.Delete(AuthorID.ToString)
+            ltPesan.Text = "<div class='alert alert-success'>Data berhasil didelete !</div>"
+        Catch ex As Exception
+            ModelState.AddModelError("", String.Format("Error {0}", ex.Message))
+        End Try
+    End Sub
 End Class

@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class DaftarAuthor
     
     '''<summary>
+    '''frmTambahAuthor control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmTambahAuthor As Global.System.Web.UI.WebControls.FormView
+    
+    '''<summary>
     '''ltPesan control.
     '''</summary>
     '''<remarks>
@@ -21,6 +30,15 @@ Partial Public Class DaftarAuthor
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ltPesan As Global.System.Web.UI.WebControls.Literal
+    
+    '''<summary>
+    '''pnlGrid control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents pnlGrid As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
     '''gvAuthor control.

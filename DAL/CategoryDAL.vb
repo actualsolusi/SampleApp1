@@ -13,15 +13,49 @@ Public Class CategoryDAL
 
 
     Public Sub Create(model As Category) Implements ICrud(Of Category).Create
-        Throw New NotImplementedException()
+        Using conn As New SqlConnection(GetConn())
+            Dim strSql = "insert into Category(CategoryName) values(@CategoryName)"
+
+            Dim params = New With {.CategoryName = model.CategoryName}
+
+            Try
+                conn.Execute(strSql, params)
+            Catch sqlEx As SqlException
+                Throw New Exception(sqlEx.Number & " " & sqlEx.Message)
+            End Try
+        End Using
     End Sub
 
     Public Sub Delete(id As String) Implements ICrud(Of Category).Delete
-        Throw New NotImplementedException()
+        Using conn As New SqlConnection(GetConn())
+            Dim strSql = "delete from Category where CategoryID=@CategoryID"
+
+            Dim params = New With {.CategoryID = id}
+
+            Try
+                conn.Execute(strSql, params)
+            Catch sqlEx As SqlException
+                Throw New Exception(sqlEx.Number & " " & sqlEx.Message)
+            End Try
+        End Using
     End Sub
 
     Public Sub Update(model As Category) Implements ICrud(Of Category).Update
-        Throw New NotImplementedException()
+        Using conn As New SqlConnection(GetConn())
+            Dim strSql = "update Category set CategoryName=@CategoryName 
+                          where CategoryID=@CategoryID"
+
+            Dim params = New With {
+                .CategoryName = model.CategoryName,
+                .CategoryID = model.CategoryID
+            }
+
+            Try
+                conn.Execute(strSql, params)
+            Catch sqlEx As SqlException
+                Throw New Exception(sqlEx.Number & " " & sqlEx.Message)
+            End Try
+        End Using
     End Sub
 
     Public Function GetAll() As IEnumerable(Of Category) Implements ICrud(Of Category).GetAll

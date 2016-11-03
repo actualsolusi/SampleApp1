@@ -14,5 +14,6 @@ Public Class SampleComboBox
 
     Protected Sub btnPilih_Click(sender As Object, e As EventArgs) Handles btnPilih.Click
         lblData.Text = "Valuenya :" & cmbCategory.SelectedValue.ToString
+        cmbCategory.SelectedIndex = 0
     End Sub
 End Class

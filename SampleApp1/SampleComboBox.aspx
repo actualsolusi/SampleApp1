@@ -9,7 +9,8 @@
                 <ajaxToolkit:ComboBox ID="cmbCategory" DataTextField="CategoryName" DataValueField="CategoryID"
                     runat="server" DropDownStyle="DropDownList" AutoCompleteMode="Suggest"
                     CaseSensitive="false" ItemInsertLocation="Append" ItemType="BO.Category"
-                    SelectMethod="cmbCategory_GetData" CssClass="form-control">
+                    SelectMethod="cmbCategory_GetData" CssClass="form-control" AppendDataBoundItems="True">
+                    <asp:ListItem Value="-1">---Pilih Disini----</asp:ListItem>
                 </ajaxToolkit:ComboBox>
             </div>
         </div>

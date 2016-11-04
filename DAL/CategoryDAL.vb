@@ -86,7 +86,7 @@ Public Class CategoryDAL
 
     Public Function GetPrefixName(prefixText As String, count As Integer) As IEnumerable(Of String)
         Using conn As New SqlConnection(GetConn())
-            Dim strSql = "select (CategoryName + ';' + str(CategoryID)) from Categories 
+            Dim strSql = "select (CategoryName + '                    ;' + str(CategoryID)) from Categories 
                           where CategoryName like @CategoryName 
                           order by CategoryName asc 
                           offset 0 rows 

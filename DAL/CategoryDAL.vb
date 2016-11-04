@@ -84,6 +84,19 @@ Public Class CategoryDAL
         End Using
     End Function
 
+    Public Function GetPrefixName(prefixText As String, count As Integer) As IEnumerable(Of String)
+        Using conn As New SqlConnection(GetConn())
+            Dim strSql = "select (CategoryName + ';' + str(CategoryID)) from Categories 
+                          where CategoryName like @CategoryName 
+                          offset 0 rows 
+                          fetch next @count rows only"
+
+            Dim params = New With {.CategoryName = prefixText, .count = count}
+
+            Return conn.Query(Of String)(strSql, params)
+        End Using
+    End Function
+
     Public Function GetByID(id As String) As Category Implements ICrud(Of Category).GetByID
         Using conn As New SqlConnection(GetConn())
             Dim strSql = "select * from Categories 

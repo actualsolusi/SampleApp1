@@ -16,8 +16,9 @@ Public Class MyWebService
 
     <WebMethod()>
     <ScriptMethod()>
-    Public Function GetSuggestCategory() As String
-        Return "Hello World"
+    Public Function GetSuggestCategory(prefixText As String, count As Integer) As String()
+        Dim categoryDAL As New CategoryDAL
+        'Dim results = categoryDAL.GetAllByName
     End Function
 
 End Class

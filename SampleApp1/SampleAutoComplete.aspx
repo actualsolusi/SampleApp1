@@ -12,7 +12,7 @@
         runat="server" TargetControlID="txtCategoryName" ServicePath="~/MyWebService.asmx" 
         ServiceMethod="GetSuggestCategory" MinimumPrefixLength="2" 
         CompletionInterval="500" EnableCaching="true"
-        CompletionSetCount="20" ></ajaxToolkit:AutoCompleteExtender>
+        CompletionSetCount="50" ></ajaxToolkit:AutoCompleteExtender>
 
     <asp:Button Text="Submit" ID="btnSubmit" runat="server" /><br /><br />
     <asp:Label ID="lblCategory" runat="server" />

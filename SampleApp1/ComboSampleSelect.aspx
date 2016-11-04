@@ -5,12 +5,15 @@
     <script src="Scripts/select2.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $(".js-example-basic-single").select2();
+            $("#ddCategory").select2();
         });
     </script>
 
 
-    <asp:DropDownList runat="server" ID="ddCategory" DataValueField="CategoryID" DataTextField="CategoryName" ItemType="BO.Category" CssClass="js-example-basic-single"
+    <asp:DropDownList runat="server" ID="ddCategory" 
+        ClientIDMode="Static" DataValueField="CategoryID" 
+        DataTextField="CategoryName" ItemType="BO.Category" 
+        CssClass="form-control"
         SelectMethod="cmbCategory_GetData">
     </asp:DropDownList>
     <asp:Button ID="btnSubmit" runat="server" Text="Submit" /><br />

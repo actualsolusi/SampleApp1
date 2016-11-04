@@ -124,6 +124,8 @@ Public Class SampleModal
             ltKet.Text = "<div class='alert alert-success'>Semua data sudah dimasukan ke tabel</div>"
             tblMaster.Clear()
             tblBookMaster.Clear()
+
+            gvMaster.DataBind()
         Catch ex As Exception
             ltKet.Text = "<div class='alert alert-danger'>" & ex.Message & "</div>"
         End Try

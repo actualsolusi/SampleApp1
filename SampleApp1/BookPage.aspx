@@ -192,7 +192,6 @@
         ID="gvBook" ItemType="BO.Book" AutoGenerateColumns="false"
         DataKeyNames="BookID" SelectMethod="gvBook_GetData">
         <Columns>
-            <asp:BoundField DataField="BookID" HeaderText="ID" />
             <asp:BoundField DataField="Title" HeaderText="Title" />
             <asp:BoundField DataField="Category.CategoryName" HeaderText="Category" />
             <asp:BoundField DataField="Author.FirstName" HeaderText="Author" />

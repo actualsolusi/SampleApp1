@@ -14,7 +14,7 @@ Public Class BookDAL
 
     Public Sub Create(model As Book) Implements ICrud(Of Book).Create
         Using conn As New SqlConnection(GetConn())
-            Dim strSql = "insert into Book(AuthorID,CategoryID,Title,PublicationDate,ISBN,CoverImage,Price,Description,Publisher) 
+            Dim strSql = "insert into Books(AuthorID,CategoryID,Title,PublicationDate,ISBN,CoverImage,Price,Description,Publisher) 
             values(@AuthorID,@CategoryID,@Title,@PublicationDate,@ISBN,@CoverImage,@Price,@Description,@Publisher)"
 
             Dim params = New With {

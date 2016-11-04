@@ -1,5 +1,6 @@
 ﻿Public Class Book
     Public Property BookID As Integer
+    Public Property NoTransaksi As String
     Public Property AuthorID As Integer
     Public Property CategoryID As Integer
     Public Property Title As String

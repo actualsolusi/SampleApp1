@@ -252,10 +252,13 @@
     <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="sample.json" />
+    <Content Include="sample2.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="MyWebService.asmx" />
     <Content Include="SampleAutoComplete.aspx" />
     <Content Include="SampleComboBox.aspx" />
+    <Content Include="SampleModal.aspx" />
     <Content Include="SampleParameter.aspx" />
     <Content Include="SampleServerControl.aspx" />
     <Content Include="SampleValidation.aspx" />
@@ -444,6 +447,13 @@
     </Compile>
     <Compile Include="SampleComboBox.aspx.vb">
       <DependentUpon>SampleComboBox.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SampleModal.aspx.designer.vb">
+      <DependentUpon>SampleModal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleModal.aspx.vb">
+      <DependentUpon>SampleModal.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="SampleParameter.aspx.designer.vb">

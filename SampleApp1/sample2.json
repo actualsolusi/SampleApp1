@@ -1,0 +1,118 @@
+﻿{
+  "metadata": {
+    "code": "200",
+    "message": "OK"
+  },
+  "response": {
+    "count": "7",
+    "limit": "7",
+    "list": [
+      {
+        "biayaTagihan": "0.00",
+        "diagnosa": {
+          "kodeDiagnosa": "A42.1",
+          "namaDiagnosa": "Abdominal actinomycosis"
+        },
+        "jnsPelayanan": "Jalan",
+        "noSEP": "1201R00211160000001",
+        "poliTujuan": {
+          "kdPoli": "INT",
+          "nmPoli": "Poli Penyakit Dalam"
+        },
+        "tglPulang": "2016-11-03",
+        "tglSEP": "2016-11-03"
+      },
+      {
+        "biayaTagihan": "0.00",
+        "diagnosa": {
+          "kodeDiagnosa": "A42.1",
+          "namaDiagnosa": "Abdominal actinomycosis"
+        },
+        "jnsPelayanan": "Jalan",
+        "noSEP": "1201R00210160000003",
+        "poliTujuan": {
+          "kdPoli": "INT",
+          "nmPoli": "Poli Penyakit Dalam"
+        },
+        "tglPulang": "2016-10-21",
+        "tglSEP": "2016-10-21"
+      },
+      {
+        "biayaTagihan": "0.00",
+        "diagnosa": {
+          "kodeDiagnosa": "I71.3",
+          "namaDiagnosa": "Abdominal aortic aneurysm, ruptured"
+        },
+        "jnsPelayanan": "Jalan",
+        "noSEP": "1115R00210160000022",
+        "poliTujuan": {
+          "kdPoli": "INT",
+          "nmPoli": "Poli Penyakit Dalam"
+        },
+        "tglPulang": "2016-10-17",
+        "tglSEP": "2016-10-17"
+      },
+      {
+        "biayaTagihan": "0.00",
+        "diagnosa": {
+          "kodeDiagnosa": "I71.3",
+          "namaDiagnosa": "Abdominal aortic aneurysm, ruptured"
+        },
+        "jnsPelayanan": "Jalan",
+        "noSEP": "1201R00210160000001",
+        "poliTujuan": {
+          "kdPoli": "INT",
+          "nmPoli": "Poli Penyakit Dalam"
+        },
+        "tglPulang": "2016-10-14",
+        "tglSEP": "2016-10-14"
+      },
+      {
+        "biayaTagihan": "0.00",
+        "diagnosa": {
+          "kodeDiagnosa": "I71.4",
+          "namaDiagnosa": "Abdominal aortic aneurysm, without mention of rupture"
+        },
+        "jnsPelayanan": "Jalan",
+        "noSEP": "1115R00210160000020",
+        "poliTujuan": {
+          "kdPoli": "INT",
+          "nmPoli": "Poli Penyakit Dalam"
+        },
+        "tglPulang": "2016-10-11",
+        "tglSEP": "2016-10-11"
+      },
+      {
+        "biayaTagihan": "0.00",
+        "diagnosa": {
+          "kodeDiagnosa": "I71.3",
+          "namaDiagnosa": "Abdominal aortic aneurysm, ruptured"
+        },
+        "jnsPelayanan": "Jalan",
+        "noSEP": "1115R00210160000012",
+        "poliTujuan": {
+          "kdPoli": "INT",
+          "nmPoli": "Poli Penyakit Dalam"
+        },
+        "tglPulang": "2016-10-10",
+        "tglSEP": "2016-10-10"
+      },
+      {
+        "biayaTagihan": "0.00",
+        "diagnosa": {
+          "kodeDiagnosa": "Z09.8",
+          "namaDiagnosa": "Follow-up examination after other treatment for other conditions"
+        },
+        "jnsPelayanan": "Jalan",
+        "noSEP": "1115R00210160000001",
+        "poliTujuan": {
+          "kdPoli": "INT",
+          "nmPoli": "Poli Penyakit Dalam"
+        },
+        "tglPulang": "2016-10-08",
+        "tglSEP": "2016-10-08"
+      }
+    ],
+    "start": "1"
+  }
+}

@@ -253,6 +253,8 @@
     <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="MyWebService.asmx" />
+    <Content Include="SampleAutoComplete.aspx" />
     <Content Include="SampleComboBox.aspx" />
     <Content Include="SampleParameter.aspx" />
     <Content Include="SampleServerControl.aspx" />
@@ -425,6 +427,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MyWebService.asmx.vb">
+      <DependentUpon>MyWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SampleAutoComplete.aspx.designer.vb">
+      <DependentUpon>SampleAutoComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleAutoComplete.aspx.vb">
+      <DependentUpon>SampleAutoComplete.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="SampleComboBox.aspx.designer.vb">
       <DependentUpon>SampleComboBox.aspx</DependentUpon>

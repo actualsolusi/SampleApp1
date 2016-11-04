@@ -18,7 +18,8 @@ Public Class MyWebService
     <ScriptMethod()>
     Public Function GetSuggestCategory(prefixText As String, count As Integer) As String()
         Dim categoryDAL As New CategoryDAL
-        'Dim results = categoryDAL.GetAllByName
+        Dim results = categoryDAL.GetPrefixName(prefixText, count).ToArray()
+        Return results
     End Function
 
 End Class

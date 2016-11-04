@@ -88,10 +88,11 @@ Public Class CategoryDAL
         Using conn As New SqlConnection(GetConn())
             Dim strSql = "select (CategoryName + ';' + str(CategoryID)) from Categories 
                           where CategoryName like @CategoryName 
+                          order by CategoryName asc 
                           offset 0 rows 
                           fetch next @count rows only"
 
-            Dim params = New With {.CategoryName = prefixText, .count = count}
+            Dim params = New With {.CategoryName = prefixText & "%", .count = count}
 
             Return conn.Query(Of String)(strSql, params)
         End Using

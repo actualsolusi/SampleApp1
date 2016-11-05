@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class DataCategory
     
     '''<summary>
+    '''lblOuterPanel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblOuterPanel As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''pnlCategory control.
     '''</summary>
     '''<remarks>
@@ -21,6 +30,15 @@ Partial Public Class DataCategory
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlCategory As Global.System.Web.UI.UpdatePanel
+    
+    '''<summary>
+    '''lblInnerPanel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblInnerPanel As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''gvCategory control.

@@ -5,7 +5,8 @@ Public Class DataCategory
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        lblOuterPanel.Text = DateTime.Now.ToString
+        lblInnerPanel.Text = DateTime.Now.ToString
     End Sub
 
     ' The return type can be changed to IEnumerable, however to support

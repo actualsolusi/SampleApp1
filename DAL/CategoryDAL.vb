@@ -86,7 +86,7 @@ Public Class CategoryDAL
         totalRowCount = CategoryRowCount()
         Using conn As New SqlConnection(GetConn())
             Dim strSql = "select * from Categories 
-                          order by CategoryName 
+                          order by CategoryName
                           offset @startRowIndex rows 
                           fetch next @maximumRows rows only"
 

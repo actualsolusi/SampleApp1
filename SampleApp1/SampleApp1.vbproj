@@ -258,6 +258,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="MyWebService.asmx" />
     <Content Include="SampleAutoComplete.aspx" />
+    <Content Include="SampleBacaSON.aspx" />
     <Content Include="SampleComboBox.aspx" />
     <Content Include="SampleJSON.aspx" />
     <Content Include="SampleModal.aspx" />
@@ -449,6 +450,13 @@
     </Compile>
     <Compile Include="SampleAutoComplete.aspx.vb">
       <DependentUpon>SampleAutoComplete.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SampleBacaSON.aspx.designer.vb">
+      <DependentUpon>SampleBacaSON.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleBacaSON.aspx.vb">
+      <DependentUpon>SampleBacaSON.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="SampleComboBox.aspx.designer.vb">

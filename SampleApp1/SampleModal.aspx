@@ -130,14 +130,14 @@
                                 <br />
                                 <div>
                                     <asp:GridView runat="server" ID="gvBook" CssClass="table table-striped" DataKeyNames="BookID"
-                                        AutoGenerateColumns="False" SelectMethod="gvBook_GetData" ItemType="BO.Book">
+                                        AutoGenerateColumns="False" SelectMethod="gvBook_GetData" DeleteMethod="gvBook_DeleteItem" ItemType="BO.Book">
                                         <Columns>
                                             <asp:BoundField DataField="BookID" HeaderText="ID" />
                                             <asp:BoundField DataField="Title" HeaderText="Title" />
                                             <asp:BoundField DataField="Price" DataFormatString="{0:N0}" HeaderText="Price">
                                                 <ItemStyle HorizontalAlign="Right" />
                                             </asp:BoundField>
-                                            <asp:CommandField ShowSelectButton="true" />
+                                            <asp:CommandField ShowDeleteButton="true" />
                                         </Columns>
                                     </asp:GridView>
                                     <asp:Literal ID="ltPesan" runat="server" /><br />

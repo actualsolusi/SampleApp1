@@ -53,20 +53,6 @@ Public Class SampleModal
         AddBook()
     End Sub
 
-    Protected Sub gvBook_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles gvBook.RowCommand
-        If e.CommandName.Equals("Select") Then
-            'Dim oItem = CType(CType(e.CommandSource, LinkButton).NamingContainer, GridViewRow)
-            Dim index = CInt(e.CommandArgument.ToString)
-            Dim bookID = gvBook.DataKeys(index).Value.ToString()
-
-            Dim delData = (From b In tblBook
-                           Where b.BookID = CInt(bookID)
-                           Select b).SingleOrDefault
-
-            tblBook.Remove(delData)
-            gvBook.DataBind()
-        End If
-    End Sub
 
     Private Sub ClearControl()
         txtBookID.Text = String.Empty
@@ -129,5 +115,15 @@ Public Class SampleModal
         Catch ex As Exception
             ltKet.Text = "<div class='alert alert-danger'>" & ex.Message & "</div>"
         End Try
+    End Sub
+
+    ' The id parameter name should match the DataKeyNames value set on the control
+    Public Sub gvBook_DeleteItem(ByVal BookID As Integer)
+        Dim delData = (From b In tblBook
+                       Where b.BookID = CInt(bookID)
+                       Select b).SingleOrDefault
+
+        tblBook.Remove(delData)
+        gvBook.DataBind()
     End Sub
 End Class

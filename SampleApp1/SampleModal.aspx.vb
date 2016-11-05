@@ -4,11 +4,11 @@ Imports BO
 Public Class SampleModal
     Inherits System.Web.UI.Page
 
-    Private Shared tblMaster As New List(Of MasterBook)
-    Private Shared tblBookMaster As New List(Of Book)
+    Private tblMaster As New List(Of MasterBook)
+    Private tblBookMaster As New List(Of Book)
 
     'yg belum ada nomor transaksi
-    Private Shared tblBook As New List(Of Book)
+    Private tblBook As New List(Of Book)
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
@@ -31,10 +31,21 @@ Public Class SampleModal
     '     ByRef totalRowCount as Integer
     '     ByVal sortByExpression as String
     Public Function gvBook_GetData() As IEnumerable(Of BO.Book)
+        Return CekSession()
+    End Function
+
+    Private Function CekSession() As List(Of Book)
+        If Not IsNothing(Session("tblBook")) Then
+            tblBook = CType(Session("tblBook"), List(Of Book))
+        End If
+
         Return tblBook
     End Function
 
     Private Sub AddBook()
+
+        tblBook = CekSession()
+
         Dim newBook As New Book With {
             .BookID = CInt(txtBookID.Text),
             .Title = txtTitle.Text,
@@ -46,6 +57,7 @@ Public Class SampleModal
         }
 
         tblBook.Add(newBook)
+        Session("tblBook") = tblBook
         gvBook.DataBind()
     End Sub
 
@@ -62,6 +74,7 @@ Public Class SampleModal
         txtPublisher.Text = String.Empty
 
         tblBook.Clear()
+        Session("tblBook") = Nothing
         gvBook.DataBind()
     End Sub
 
@@ -119,11 +132,14 @@ Public Class SampleModal
 
     ' The id parameter name should match the DataKeyNames value set on the control
     Public Sub gvBook_DeleteItem(ByVal BookID As Integer)
+        tblBook = CekSession()
+
         Dim delData = (From b In tblBook
-                       Where b.BookID = CInt(bookID)
+                       Where b.BookID = CInt(BookID)
                        Select b).SingleOrDefault
 
         tblBook.Remove(delData)
+        Session("tblBook") = tblBook
         gvBook.DataBind()
     End Sub
 End Class

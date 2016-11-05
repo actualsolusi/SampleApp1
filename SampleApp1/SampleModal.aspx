@@ -34,7 +34,7 @@
             </asp:GridView>
 
             <br />
-            <asp:Button Text="Save All" ID="btnSaveAll" OnClick="btnSaveAll_Click" CssClass="btn btn-primary" 
+            <asp:Button Text="Save All" ID="btnSaveAll" OnClick="btnSaveAll_Click" CssClass="btn btn-primary"
                 runat="server" /><br />
             <asp:Literal ID="ltKet" runat="server" />
         </ContentTemplate>
@@ -69,68 +69,71 @@
                                                     CssClass="form-control" placeholder="Enter nama group" />
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-2" for="txtBookID">Book ID :</label>
-                                        <div class="col-sm-10">
-                                            <asp:TextBox runat="server" ID="txtBookID"
-                                                CssClass="form-control" placeholder="Enter title" />
+
+                                        <div class="form-group" style="margin-bottom:1px;">
+                                            <label class="control-label col-sm-2" for="txtBookID">Book ID :</label>
+                                            <div class="col-sm-10">
+                                                <asp:TextBox runat="server" ID="txtBookID"
+                                                    CssClass="form-control" placeholder="Enter title" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-2" for="ddCategory">Category:</label>
-                                        <div class="col-sm-10">
-                                            <asp:DropDownList runat="server" CssClass="selectCategory" ID="ddCategory" ItemType="BO.Category"
-                                                SelectMethod="gvCategory_GetData" DataTextField="CategoryName" DataValueField="CategoryID">
-                                            </asp:DropDownList>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="ddCategory">Category:</label>
+                                            <div class="col-sm-10">
+                                                <asp:DropDownList runat="server" CssClass="selectCategory" ID="ddCategory" ItemType="BO.Category"
+                                                    SelectMethod="gvCategory_GetData" DataTextField="CategoryName" DataValueField="CategoryID">
+                                                </asp:DropDownList>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-2" for="ddAuthor">Author:</label>
-                                        <div class="col-sm-10">
-                                            <asp:DropDownList runat="server" CssClass="selectCategory" ID="ddAuthor" ItemType="BO.Author"
-                                                SelectMethod="gvAuthor_GetData" DataTextField="FirstName" DataValueField="AuthorID">
-                                            </asp:DropDownList>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="ddAuthor">Author:</label>
+                                            <div class="col-sm-10">
+                                                <asp:DropDownList runat="server" CssClass="selectCategory" ID="ddAuthor" ItemType="BO.Author"
+                                                    SelectMethod="gvAuthor_GetData" DataTextField="FirstName" DataValueField="AuthorID">
+                                                </asp:DropDownList>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-2" for="txtTitle">Title:</label>
-                                        <div class="col-sm-10">
-                                            <asp:TextBox runat="server" ID="txtTitle"
-                                                CssClass="form-control" placeholder="Enter title" />
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="txtTitle">Title:</label>
+                                            <div class="col-sm-10">
+                                                <asp:TextBox runat="server" ID="txtTitle"
+                                                    CssClass="form-control" placeholder="Enter title" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-2" for="txtDate">Date:</label>
-                                        <div class="col-sm-10">
-                                            <asp:TextBox runat="server" ID="txtDate" TextMode="Date"
-                                                CssClass="form-control" placeholder="Enter date" />
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="txtDate">Date:</label>
+                                            <div class="col-sm-10">
+                                                <asp:TextBox runat="server" ID="txtDate" TextMode="Date"
+                                                    CssClass="form-control" placeholder="Enter date" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-2" for="txtPrice">Price:</label>
-                                        <div class="col-sm-10">
-                                            <asp:TextBox runat="server" ID="txtPrice" TextMode="Number"
-                                                CssClass="form-control" placeholder="Enter price" />
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="txtPrice">Price:</label>
+                                            <div class="col-sm-10">
+                                                <asp:TextBox runat="server" ID="txtPrice" TextMode="Number"
+                                                    CssClass="form-control" placeholder="Enter price" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-2" for="txtPublisher">Publisher:</label>
-                                        <div class="col-sm-10">
-                                            <asp:TextBox runat="server" ID="txtPublisher"
-                                                CssClass="form-control" placeholder="Enter publisher" />
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="txtPublisher">Publisher:</label>
+                                            <div class="col-sm-10">
+                                                <asp:TextBox runat="server" ID="txtPublisher"
+                                                    CssClass="form-control" placeholder="Enter publisher" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-offset-2 col-sm-10">
-                                            <asp:Button ID="btnCreate" Text="Create" OnClick="btnCreate_Click" CssClass="btn btn-primary" runat="server" />
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <asp:Button ID="btnCreate" Text="Create" OnClick="btnCreate_Click" CssClass="btn btn-primary" runat="server" />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <br />
                                 <div>
-                                    <asp:GridView runat="server" ID="gvBook" CssClass="table table-striped" DataKeyNames="BookID"
-                                        AutoGenerateColumns="False" SelectMethod="gvBook_GetData" DeleteMethod="gvBook_DeleteItem" ItemType="BO.Book">
+                                    <asp:GridView runat="server" ID="gvBook" CssClass="table table-striped"
+                                        DataKeyNames="BookID"
+                                        AutoGenerateColumns="False" SelectMethod="gvBook_GetData"
+                                        DeleteMethod="gvBook_DeleteItem" ItemType="BO.Book">
                                         <Columns>
                                             <asp:BoundField DataField="BookID" HeaderText="ID" />
                                             <asp:BoundField DataField="Title" HeaderText="Title" />
@@ -141,7 +144,8 @@
                                         </Columns>
                                     </asp:GridView>
                                     <asp:Literal ID="ltPesan" runat="server" /><br />
-                                    <asp:Button Text="Save" ID="btnSave" CssClass="btn btn-info" OnClientClick="CloseForm()" OnClick="btnSave_Click" runat="server" /><br /><br />
+                                    <asp:Button Text="Save" ID="btnSave" CssClass="btn btn-info" OnClientClick="CloseForm()" OnClick="btnSave_Click" runat="server" /><br />
+                                    <br />
                                 </div>
                                 <%--<div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

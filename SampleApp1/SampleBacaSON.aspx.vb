@@ -13,6 +13,13 @@ Public Class SampleBacaSON
 
         Dim kdJenisPeserta As String = CType(data("response")("peserta")("jenisPeserta")("kdJenisPeserta"), String)
         Dim nmJenisPeserta As String = CType(data("response")("peserta")("jenisPeserta")("nmJenisPeserta"), String)
-        lblIsiJSON.Text = "Kode :" & kdJenisPeserta & " - Jenis Peserta : " & nmJenisPeserta
+        'lblIsiJSON.Text = "Kode :" & kdJenisPeserta & " - Jenis Peserta : " & nmJenisPeserta
+
+        Dim strprop As New StringBuilder
+        For Each properti In data.Properties
+            strprop.Append(properti.Value)
+        Next
+
+        lblIsiJSON.Text = strprop.ToString
     End Sub
 End Class

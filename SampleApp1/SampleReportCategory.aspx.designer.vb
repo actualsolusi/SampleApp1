@@ -11,23 +11,14 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class SampleJSON
+Partial Public Class SampleReportCategory
     
     '''<summary>
-    '''lblData control.
+    '''ReportViewer1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblData As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''btnGetData control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnGetData As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents ReportViewer1 As Global.Microsoft.Reporting.WebForms.ReportViewer
 End Class

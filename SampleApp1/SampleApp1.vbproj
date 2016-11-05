@@ -86,6 +86,7 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -255,14 +256,26 @@
     <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="sample.json" />
     <Content Include="sample2.json" />
+    <Content Include="SampleReportPrint.aspx" />
+    <Content Include="SampleShopDbDataSet.xsc">
+      <DependentUpon>SampleShopDbDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="SampleShopDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SampleShopDbDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="SampleShopDbDataSet.xss">
+      <DependentUpon>SampleShopDbDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="MyWebService.asmx" />
     <Content Include="SampleAutoComplete.aspx" />
     <Content Include="SampleBacaSON.aspx" />
     <Content Include="SampleComboBox.aspx" />
-    <Content Include="SampleJSON.aspx" />
     <Content Include="SampleModal.aspx" />
     <Content Include="SampleParameter.aspx" />
+    <Content Include="SampleReportCategory.aspx" />
     <Content Include="SampleServerControl.aspx" />
     <Content Include="SampleValidation.aspx" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
@@ -466,13 +479,6 @@
       <DependentUpon>SampleComboBox.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="SampleJSON.aspx.designer.vb">
-      <DependentUpon>SampleJSON.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SampleJSON.aspx.vb">
-      <DependentUpon>SampleJSON.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="SampleModal.aspx.designer.vb">
       <DependentUpon>SampleModal.aspx</DependentUpon>
     </Compile>
@@ -487,12 +493,31 @@
       <DependentUpon>SampleParameter.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="SampleReportCategory.aspx.designer.vb">
+      <DependentUpon>SampleReportCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleReportCategory.aspx.vb">
+      <DependentUpon>SampleReportCategory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SampleReportPrint.aspx.designer.vb">
+      <DependentUpon>SampleReportPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleReportPrint.aspx.vb">
+      <DependentUpon>SampleReportPrint.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="SampleServerControl.aspx.designer.vb">
       <DependentUpon>SampleServerControl.aspx</DependentUpon>
     </Compile>
     <Compile Include="SampleServerControl.aspx.vb">
       <DependentUpon>SampleServerControl.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SampleShopDbDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SampleShopDbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SampleValidation.aspx.designer.vb">
       <DependentUpon>SampleValidation.aspx</DependentUpon>
@@ -530,6 +555,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportCategory.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">

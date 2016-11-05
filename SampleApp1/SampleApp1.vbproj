@@ -254,6 +254,7 @@
     <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\Startbootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="ReportSampleTable.aspx" />
     <Content Include="sample.json" />
     <Content Include="sample2.json" />
     <Content Include="SampleReportPrint.aspx" />
@@ -458,6 +459,13 @@
       <DependentUpon>MyWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ReportSampleTable.aspx.designer.vb">
+      <DependentUpon>ReportSampleTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSampleTable.aspx.vb">
+      <DependentUpon>ReportSampleTable.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="SampleAutoComplete.aspx.designer.vb">
       <DependentUpon>SampleAutoComplete.aspx</DependentUpon>
     </Compile>
@@ -556,6 +564,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportCategory.rdlc" />
+    <EmbeddedResource Include="Report\ReportSampleTable.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">

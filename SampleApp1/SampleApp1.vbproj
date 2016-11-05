@@ -279,6 +279,7 @@
     <Content Include="SampleReportCategory.aspx" />
     <Content Include="SampleServerControl.aspx" />
     <Content Include="SampleValidation.aspx" />
+    <Content Include="script.txt" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\bootstrap.js" />

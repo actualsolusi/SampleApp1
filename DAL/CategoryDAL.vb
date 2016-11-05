@@ -70,6 +70,36 @@ Public Class CategoryDAL
     End Function
 
 
+    Private Function CategoryRowCount() As Integer
+        Using conn As New SqlConnection(GetConn())
+            Dim strSql = "select count(*) from Categories"
+
+            Return CInt(conn.ExecuteScalar(strSql))
+        End Using
+    End Function
+
+    Public Function GetAllPaging(maximumRows As Integer,
+                                 startRowIndex As Integer,
+                                 ByRef totalRowCount As Integer,
+                                 sortByExpression As String) As IEnumerable(Of Category)
+
+        totalRowCount = CategoryRowCount()
+        Using conn As New SqlConnection(GetConn())
+            Dim strSql = "select * from Categories 
+                          order by CategoryName 
+                          offset @startRowIndex rows 
+                          fetch next @maximumRows rows only"
+
+            Dim params = New With {
+                .startRowIndex = startRowIndex,
+                .maximumRows = maximumRows
+            }
+
+            Dim results = conn.Query(Of Category)(strSql, params)
+            Return results
+        End Using
+    End Function
+
     Public Function GetAllByName(categoryName As String) As IEnumerable(Of Category)
         Using conn As New SqlConnection(GetConn())
             Dim strSql = "select * from Categories

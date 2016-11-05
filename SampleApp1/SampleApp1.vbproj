@@ -211,6 +211,7 @@
     <Content Include="Content\Startbootstrap\js\plugins\morris\raphael.min.js" />
     <Content Include="ContohTemplate.aspx" />
     <Content Include="DaftarAuthor.aspx" />
+    <Content Include="DataCategory.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -258,6 +259,7 @@
     <Content Include="MyWebService.asmx" />
     <Content Include="SampleAutoComplete.aspx" />
     <Content Include="SampleComboBox.aspx" />
+    <Content Include="SampleJSON.aspx" />
     <Content Include="SampleModal.aspx" />
     <Content Include="SampleParameter.aspx" />
     <Content Include="SampleServerControl.aspx" />
@@ -402,6 +404,13 @@
       <DependentUpon>DaftarAuthor.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="DataCategory.aspx.designer.vb">
+      <DependentUpon>DataCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataCategory.aspx.vb">
+      <DependentUpon>DataCategory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -447,6 +456,13 @@
     </Compile>
     <Compile Include="SampleComboBox.aspx.vb">
       <DependentUpon>SampleComboBox.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SampleJSON.aspx.designer.vb">
+      <DependentUpon>SampleJSON.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleJSON.aspx.vb">
+      <DependentUpon>SampleJSON.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="SampleModal.aspx.designer.vb">
